@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home";
+import Movies from "./pages/MovieCollection";
+import MovieDetail from "./components/MovieDetails"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Movies" element={<Movies />} />
+        <Route path="/Details" element={<MovieDetail/>} />
+       
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+//https://codesandbox.io/s/brave-cannon-14t8dx?file=/src/Home.js
+
+
+//https://developers.themoviedb.org/3/movies/get-latest-movie  API
+
+//https://codesandbox.io/s/silly-water-s9ibbv?file=/App.js swich
