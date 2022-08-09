@@ -3,7 +3,7 @@ import styled from "styled-components";
 let Container = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 64px;
+  padding: 64px 0px 24px 0px;
 
   & h2 {
     margin-right: 16px;
@@ -34,7 +34,6 @@ font-weight: 600;
 
 let Movie_name = styled.a`
  
-  font-size: large;
   
   &:hover {
     color: var(--secondary-light);
@@ -46,7 +45,8 @@ let Pic_flex = styled.div`
   flex-direction: column;
   padding: 0px 22px 32px 22px;
 
-  .circular {
+
+  .circle{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,8 @@ let Pic_flex = styled.div`
 let Image = styled.img`
   width: 150px;
   border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 12px 2px;
+box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 12px 2px;
 `;
+
 
 export { Container, Title, Movie_name, Pic_flex, Image };

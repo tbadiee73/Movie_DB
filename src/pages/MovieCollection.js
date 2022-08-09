@@ -1,10 +1,8 @@
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import {Movie_swich_button} from "../components/Movielist";
-
-
-
 export default function Movies() {
+
 
   let tabs = [
     { id: "movie", name: "Popular" },

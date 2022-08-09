@@ -9,37 +9,47 @@ let Cardcontainer =styled.div`
   `
 
 let Nav = styled.div`
+
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--primary-dark);
+  background: var(  --primary-linear);
   font-size: 1rem;
   font-weight: 600;
-  padding: 24px 0;
+  padding:20px 0;
+  
+  
 `;
 
 let Navdetails = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
 
 let Navleft = styled.div`
-  display: flex;
-  justify-content: space-between;
 
-  & a{
-    cursor: pointer;
+  & span{
+    color:var(--ring-light);
+    font-size: 1.30rem;
+    font-weight: 800;
   }
 
-  & span {
-    padding: 0 16px;
+.nav_item{
+    padding: 0 18px;
     cursor: pointer;
     color: var(--primary-text);
+    text-transform: uppercase;
+    text-indent: 10px;
+ 
 
-    &:hover {
-      color: var(--secondary-light);
+    & img{
+      padding-right:6px;
+      
     }
+
+ 
   }
 `;
 

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-let Background = styled.div`
-  background-color: rgb(92, 99, 158);
+let Container = styled.div`
+height: 600px;
+.background{
+  mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+}
 
   .poster_ui {
     width: 25%;
@@ -16,22 +19,53 @@ let Background = styled.div`
     display: flex;
     flex-direction: column;
    align-content: center;
-   color: #fff;
+   color: black;
 
    justify-content:center;
   
-   & h2{
-    margin-bottom: 24px;
  }
- & h3 {
-  margin-bottom:8px;
+ & p{
+  color: #686b6b;
+  margin-top: 0px;
 }
-& h5{
-  margin: 24px 0 8px 0;
+
 }
-    
-    
- }
+.user_score{
+  display: inline-flex;
+  padding:18px 0 ;
+
+  & h3{
+    padding:5px 12px 0;
+  }
+
+}
+
+ .circle{
+  background-color: var(--primary-dark);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+
+}
+
+.CircularProgressbar-trail {
+  stroke: var(--primary-text);
+}
+.CircularProgressbar-path {
+  stroke: var(--ring-light);
+}
+.CircularProgressbar-text {
+  fill: var(--primary-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  
+}
+
+.tagline{
+  color: #686b6b;
+  padding:5px 0;
+}
 `;
 
-export { Background };
+export {Container};

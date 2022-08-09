@@ -1,26 +1,29 @@
 import { Footer_ui } from "./styles";
-import logo from "../assets/biglogo.svg";
+import logo from "../assets/logo.svg";
+import twitt from "../assets/twitter.svg";
+import tel from "../assets/telegram.svg";
+import insta from "../assets/instagram.svg";
+import face from "../assets/facebook.svg";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <>
       <Footer_ui>
         <footer className="container">
-          <img src={logo} alt="" width="140px" />
-
-          <div className="footer_column">
-            <h3>THE BASICS</h3>
-            <a href="#">About TMDB</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Support Forums</a>
-            <a href="#">API</a>
-            <a href="#">System Status</a>
-          </div>
-          <div className="footer_column">
-            <h3>GET INVOLVED</h3>
-            <a href="#">Contribution Bible</a>
-            <a href="#">Add New Movie</a>
-            <a href="#">Add New TV Show</a>
-            
+          <p>
+            © 2022{" "}
+            <Link to={"/"} className="link">
+              mOvie_HOME
+            </Link>{" "}
+            Foundation
+          </p>
+          <a href="https://developers.themoviedb.org/3"><img src={logo} alt="" width="140px" /></a>
+          <div>
+            <img src={tel} alt="" />
+            <img src={face} alt="" />
+            <img src={insta} alt="" />
+            <img src={twitt} alt="" />
           </div>
         </footer>
       </Footer_ui>

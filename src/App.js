@@ -2,7 +2,8 @@ import "./styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Movies from "./pages/MovieCollection";
-import MovieDetail from "./components/MovieDetails"
+import MovieDetailpage from "./pages/Movie_detail"
+import People from "./pages/People"
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Movies" element={<Movies />} />
-        <Route path="/Details" element={<MovieDetail/>} />
+        <Route path="/movie/:id" element={<MovieDetailpage />} />
+        <Route path="/People" element={<People/>} />
        
       </Routes>
     </BrowserRouter>
@@ -19,9 +21,7 @@ function App() {
 
 export default App;
 
-//https://codesandbox.io/s/brave-cannon-14t8dx?file=/src/Home.js
 
 
 //https://developers.themoviedb.org/3/movies/get-latest-movie  API
 
-//https://codesandbox.io/s/silly-water-s9ibbv?file=/App.js swich

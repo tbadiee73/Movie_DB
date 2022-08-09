@@ -1,27 +1,34 @@
 import styled from "styled-components";
 
 const Footer_ui = styled.section`
-  background-color: var(--primary-dark);
+  background: var(--primary-linear);
   color: var(--primary-text);
-  
- 
 
   & footer {
-
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 80px;
+    align-items: center;
+    padding: 16px 0;
 
-    & img {
-      transform: translateY(-40%);
+    & p {
+      color: rgba(187, 199, 193, 0.75);
+      font-size: large;
+
+      .link {
+        color: var(--ring-light);
+      }
     }
 
-    & .footer_column {
-      
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
+    & div {
+      & img {
+        padding: 0px 10px;
+        cursor: pointer;
+      }
+
+      & img:hover {
+        width: 55px;
+      }
     }
   }
 `;
