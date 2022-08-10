@@ -17,6 +17,7 @@ margin:35px 20px ;
 & img{
   width:200px;
   height:250px;
+  border-radius: 8px 8px 0px 0px;
 }
 .name{
   width: 100%;
