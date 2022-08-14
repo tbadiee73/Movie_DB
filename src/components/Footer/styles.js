@@ -9,7 +9,7 @@ const Footer_ui = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 8px 0;
 
     & p {
       color: rgba(187, 199, 193, 0.75);
@@ -20,15 +20,15 @@ const Footer_ui = styled.section`
       }
     }
 
-    & div {
+   .logo {
+    
       & img {
-        padding: 0px 10px;
+  
+        padding:0px 10px;
         cursor: pointer;
       }
 
-      & img:hover {
-        width: 55px;
-      }
+  
     }
   }
 `;

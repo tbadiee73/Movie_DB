@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Container, Box} from "./style";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
-
-function Movies_Box(props) {
+function MoviesBox(props) {
   return (
     <div className="container">
       <Container>
@@ -12,8 +13,8 @@ function Movies_Box(props) {
           return (
             <Box  key={item.id}>
                 <Link to={`/movie/${item.id}`}>
-                <div className="image"><img src={img_popular_movie} /></div>
-                <div className="name">{item.name||item.title}</div>
+                <div className="image"><img src={img_popular_movie} alt="" /></div>
+                <div className="name">{item.title||item.name}</div>
               </Link>
             </Box>
           );
@@ -24,4 +25,4 @@ function Movies_Box(props) {
   );
 }
 
-export default Movies_Box;
+export default MoviesBox;

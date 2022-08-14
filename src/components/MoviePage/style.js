@@ -13,11 +13,16 @@ height: 100%;
 display: flex;
 flex-direction: column;
 margin:35px 20px ;
+ 
+& :hover{
+  opacity:.8;
+}
 
 & img{
   width:200px;
   height:250px;
   border-radius: 8px 8px 0px 0px;
+  
 }
 .name{
   width: 100%;
@@ -27,6 +32,7 @@ margin:35px 20px ;
   padding: 8px 10px;
   box-shadow:2px 7px 12px 7px rgb(0 0 0 / 15%);
 } 
+
 `;
 
   export {Container,Box};

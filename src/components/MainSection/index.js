@@ -1,7 +1,7 @@
 import { Movie_name, Pic_flex, Image } from "./styles";
 import { Link } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
-
+import "react-circular-progressbar/dist/styles.css";
 
 export default function Movie(props) {
   return (

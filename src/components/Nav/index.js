@@ -24,7 +24,7 @@ export default function Navbar() {
               <img src={film} alt="" />
               Movies{" "}
             </Link>
-            <Link to="#" className="nav_item">
+            <Link to={"/TvShow"} className="nav_item">
               <img src={tv} alt="" />
               TV Shows{" "}
             </Link>

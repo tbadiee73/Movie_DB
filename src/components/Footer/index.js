@@ -19,7 +19,7 @@ export default function Footer() {
             Foundation
           </p>
           <a href="https://developers.themoviedb.org/3"><img src={logo} alt="" width="140px" /></a>
-          <div>
+          <div className="logo">
             <img src={tel} alt="" />
             <img src={face} alt="" />
             <img src={insta} alt="" />

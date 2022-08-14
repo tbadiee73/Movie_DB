@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
-let Container = styled.div`
-height: 600px;
-.background{
-  mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
-}
+let Container= styled.div`
+padding:60px 0 0 ;
 
   .poster_ui {
-    width: 25%;
+    height: 380px;
+    width: 22%;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
   }
 
+  & h1 {
+    font-size: 3rem;
+    margin: 0;
+   
+  }
+
   
   .movie_info{
-    height: auto;
+    max-height: 300px;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -24,18 +28,18 @@ height: 600px;
    justify-content:center;
   
  }
- & p{
-  color: #686b6b;
-  margin-top: 0px;
+ & i{
+  color:#1c1d1d;
+  padding:10px 0 ;
 }
 
 }
 .user_score{
   display: inline-flex;
-  padding:18px 0 ;
+  padding:24px 0 ;
 
-  & h3{
-    padding:5px 12px 0;
+  & h4{
+    padding:12px 12px 0;
   }
 
 }
@@ -63,9 +67,49 @@ height: 600px;
 }
 
 .tagline{
-  color: #686b6b;
-  padding:5px 0;
+  color: #1c1d1d;
+  padding:10px 0;
+ 
 }
 `;
+let Section2= styled.div`
+display: flex;
+flex-direction: column;
+margin:72px 10px;
+& h2{
+  letter-spacing: 6px;
+  font-size: 2rem;
+}
+`
+const Box = styled.div`
+height: 100%;
+display: flex;
+flex-direction: column;
 
-export {Container};
+margin:10px 10px;
+
+
+& :hover{
+  opacity:.8;
+}
+
+.name{
+  width:110px;
+  height:70px;
+  font-weight:800;
+  font-size: small;
+  padding: 3px 10px;
+  box-shadow:2px 7px 12px 7px rgb(0 0 0 / 15%);
+  overflow: hidden;
+} 
+
+.image{
+  width: 110px;
+  height:140px;
+  box-shadow:2px 2px 20px 0px rgb(0 0 0 / 15%);
+}
+
+`;
+
+
+export {Container,Section2, Box};

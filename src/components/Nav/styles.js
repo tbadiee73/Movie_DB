@@ -14,6 +14,7 @@ let Nav = styled.div`
   top: 0;
   z-index: 10;
   background: var(  --primary-linear);
+  
   font-size: 1rem;
   font-weight: 600;
   padding:20px 0;

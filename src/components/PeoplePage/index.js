@@ -7,13 +7,15 @@ export default function People_Box(props) {
        <h1>Popular People</h1>
       <Container>
         {props.list.map((item) => {
+          
           let img_people = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path}`;
 
           return (
           
             <Box key={item.id}>
-            <Link to="#">
-            <div className="image"> <img src={img_people} /></div>
+            <Link to={`/person/${item.id}`}>
+        
+            <div className="image"> <img src={img_people} alt="" /></div>
 
                 <div className="name">{item.name}</div>
                 </Link>

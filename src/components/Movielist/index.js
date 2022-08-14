@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Title } from "../MainSection/styles";
 import Movie from "../MainSection";
-import Movies_Box from "../MoviePage";
+import MoviesBox from "../MoviePage";
 import {
   get_popular_movie,
   get_popular_tv,
@@ -26,7 +26,7 @@ function getdata_by_tab(id,page) {
   }
 }
 
-function HomePage_swich_button(props) {
+function HomePageSwichButton(props) {
 
   
 
@@ -85,7 +85,7 @@ function Movie_swich_button(props) {
   return (
     <>
       <Container className="container">
-        <h2>Movie</h2>
+      <h2 style={{letterSpacing:"4px" }}>MOVIES</h2>
         <Title>
           {props.tabs.map((tab) => {
             return (
@@ -104,14 +104,14 @@ function Movie_swich_button(props) {
           })}
         </Title>
       </Container>
-      <Movies_Box list={data} />
+      <MoviesBox list={data} />
       
       <PaginationOutlined setPage={(number) =>{
 
        setpage(number)
-      }} pageNumber={20}  currentpage={page} />
+      }}  currentpage={page} />
     </>
   );
 }
 
-export { HomePage_swich_button, Movie_swich_button };
+export {  HomePageSwichButton, Movie_swich_button };

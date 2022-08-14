@@ -12,9 +12,9 @@ export default function PaginationOutlined ({setPage, pageNumber,currentpage}) {
           setPage(pageNum);
         }}
         color="primary"
-        size='large'
-        count="20"
-        shape="circular" 
+        size='medume'
+        count="100"
+        shape="none" 
         variant="outlined"
          page={currentpage}
         />
