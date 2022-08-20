@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PersonInformation from "../components/Person_Information";
-import { get_person_info, get_movies_credits} from "../helpers/server";
+import { get_person_info, get_credits} from "../helpers/server";
 
 export default function Movie_Detail(){
     let { id } = useParams();
@@ -18,7 +18,7 @@ export default function Movie_Detail(){
             setinfo(response);
             
         });
-        get_movies_credits(id).then((res) => {
+        get_credits(id).then((res) => {
             setCredit(res);
           })
 

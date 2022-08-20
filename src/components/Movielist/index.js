@@ -11,8 +11,7 @@ import {
 } from "../../helpers/server";
 import PaginationOutlined from "../Pagination";
 
-
-function getdata_by_tab(id,page) {
+function getdata_by_tab(id, page) {
   if (id === "movie") {
     return get_popular_movie(page);
   } else if (id === "tv") {
@@ -27,9 +26,6 @@ function getdata_by_tab(id,page) {
 }
 
 function HomePageSwichButton(props) {
-
-  
-
   let [swich, setswich] = useState("movie");
 
   let [data, setdata] = useState([]);
@@ -66,26 +62,20 @@ function HomePageSwichButton(props) {
 }
 
 function Movie_swich_button(props) {
-
-  let [page, setpage]=useState(1);
-
+  let [page, setpage] = useState(1);
   let [swich, setswich] = useState("movie");
-
   let [data, setdata] = useState([]);
 
-
   useEffect(() => {
-    
-    getdata_by_tab(swich,page).then((response) => {
+    getdata_by_tab(swich, page).then((response) => {
       setdata(response);
-     
     });
-  }, [swich,page]);
+  }, [swich, page]);
 
   return (
     <>
       <Container className="container">
-      <h2 style={{letterSpacing:"4px" }}>MOVIES</h2>
+        <h2 style={{ letterSpacing: "4px" }}>MOVIES</h2>
         <Title>
           {props.tabs.map((tab) => {
             return (
@@ -95,7 +85,6 @@ function Movie_swich_button(props) {
                 onClick={() => {
                   setswich(tab.id);
                   setpage(1);
-
                 }}
               >
                 {tab.name}
@@ -104,14 +93,16 @@ function Movie_swich_button(props) {
           })}
         </Title>
       </Container>
-      <MoviesBox list={data} />
-      
-      <PaginationOutlined setPage={(number) =>{
+      <MoviesBox list={data} type={"movie"} />
 
-       setpage(number)
-      }}  currentpage={page} />
+      <PaginationOutlined
+        setPage={(number) => {
+          setpage(number);
+        }}
+        currentpage={page}
+      />
     </>
   );
 }
 
-export {  HomePageSwichButton, Movie_swich_button };
+export { HomePageSwichButton, Movie_swich_button };

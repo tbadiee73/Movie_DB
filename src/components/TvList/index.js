@@ -61,7 +61,7 @@ export default function TV_swich_button(props) {
           })}
         </Title>
       </Container>
-      <MoviesBox list={data} />
+      <MoviesBox list={data} type={"tv"}/>
       
       <PaginationOutlined setPage={(number) =>{
 

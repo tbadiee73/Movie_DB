@@ -9,18 +9,14 @@ export default function HomePage() {
     { id: "movie", name: "Movie" },
     { id: "tv", name: "TV" },
   ];
-  let tab = [
-    { id: "movie", name: "Moviee" },
-    { id: "tv", name: "TVee" },
-  ];
 
   return (
     <>
     <Navbar />
     <Header/>
       
-    <HomePageSwichButton tabs={tabs} /> 
-    <HomePageSwichButton tabs={tab} />
+    <HomePageSwichButton  tabs={tabs}  /> 
+  
       <Footer />
     </>
   );

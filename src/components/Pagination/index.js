@@ -6,20 +6,21 @@ import Stack from '@mui/material/Stack';
 export default function PaginationOutlined ({setPage, pageNumber,currentpage}) {
   return (
  
-          <Stack  style={{padding: "30px"}}>
+  
+  <Stack className='pagination'>
       <Pagination
         onChange={(event,pageNum) =>{
           setPage(pageNum);
         }}
         color="primary"
-        size='medume'
+        size='large'
         count="100"
         shape="none" 
         variant="outlined"
          page={currentpage}
         />
     </Stack>
-   
+
    
   );
 }

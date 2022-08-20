@@ -8,6 +8,7 @@ let Container = styled.div`
   & h2 {
     margin-right: 16px;
   }
+
 `;
 
 let Title = styled.div`
@@ -33,7 +34,6 @@ font-weight: 600;
 `;
 
 let Movie_name = styled.a`
- 
   
   &:hover {
     color: var(--secondary-light);
@@ -43,7 +43,7 @@ let Movie_name = styled.a`
 let Pic_flex = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px 22px 32px 22px;
+  padding: 0px 22px 12px 22px;
 
 
   .circle{
@@ -74,6 +74,8 @@ let Image = styled.img`
   width: 150px;
   border-radius: 12px;
 box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 12px 2px;
+
+
 `;
 
 

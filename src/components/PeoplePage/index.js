@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Container, Box } from "../MoviePage/style";
+import woman from "../assets/woman.svg"
+import man from "../assets/man.svg"
 
 export default function People_Box(props) {
   return (
@@ -9,13 +11,16 @@ export default function People_Box(props) {
         {props.list.map((item) => {
           
           let img_people = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path}`;
-
+          let woman_img =`${woman}`;
+          let man_img =`${man}`;
+          let gender_img =`${item.gender}` == 1 ? `${woman_img}`: `${man_img}`;
+          let poster =`${item.profile_path}` !== "null"? `${img_people}`: `${gender_img}`; 
           return (
           
             <Box key={item.id}>
             <Link to={`/person/${item.id}`}>
         
-            <div className="image"> <img src={img_people} alt="" /></div>
+            <div className="image"> <img src={poster} alt="" /></div>
 
                 <div className="name">{item.name}</div>
                 </Link>

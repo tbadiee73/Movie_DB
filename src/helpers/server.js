@@ -60,7 +60,13 @@ export async function get_movie_Details(id,genre_ids){
   let data = body;
   return data;
 }
-
+export async function get_tv_Details(id, genre_ids) {
+  let tv_Details=`${base_url}/tv/${id}?api_key=${api_key}&language=en-US&with_genres=${genre_ids}`;
+  let response = await fetch(tv_Details);
+  let body = await response.json();
+  let data = body;
+  return data;
+}
 
 export async function get_popular_people(page) {
   let popular_people = `${base_url}/person/popular?api_key=${api_key}&language=en-US&page=${page}`;
@@ -83,6 +89,13 @@ export async function get_movie_credits(id) {
   let data = body;
   return data;
 }
+export async function get_tv_credits(id) {
+  let tv_credits=`${base_url}/tv/${id}/credits?api_key=${api_key}&sort_by=known_for_department.desc`;
+  let response = await fetch(tv_credits);
+  let body = await response.json();
+  let data = body;
+  return data;
+}
 
 
 export async function get_person_credits(id) {
@@ -100,6 +113,13 @@ export async function get_movie_recommendations(id) {
   return data;
 }
 
+export async function get_credits(id) {
+  let response = await fetch(`${base_url}/person/${id}/combined_credits?api_key=${api_key}`)
+  let body = await response.json();
+  let data = body.cast;
+  console.log(data)
+  return data;
+}
 
 export async function get_movie_genre() {
   let movie_genre=`${base_url}/genre/movie/list?api_key=${api_key}`;
@@ -109,6 +129,7 @@ export async function get_movie_genre() {
   return data;
 }
 
+
 export async function get_discover_movie(page,genres_id) {
   let discover_movie=`${base_url}/discover/movie?api_key=${api_key}&page=${page}&with_genres=${genres_id}`;
   let response = await fetch(discover_movie);
@@ -117,10 +138,10 @@ export async function get_discover_movie(page,genres_id) {
   return data;
 }
 
-
-export async function get_movies_credits(id) {
-  let response = await fetch(`${base_url}/person/${id}/combined_credits?api_key=${api_key}`)
+export async function get_discover_tv(page,genres_id) {
+  let discover_tv=`${base_url}/discover/tv?api_key=${api_key}&page=${page}&with_genres=${genres_id}`;
+  let response = await fetch(discover_tv);
   let body = await response.json();
-  let data = body.cast;
+  let data = body;
   return data;
 }

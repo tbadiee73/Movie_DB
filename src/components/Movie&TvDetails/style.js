@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-let Container= styled.div`
+
+let Container = styled.div`
 padding:60px 0 0 ;
 
   .poster_ui {
@@ -15,10 +16,19 @@ padding:60px 0 0 ;
     margin: 0;
    
   }
+  .genrelink{
+    color:;
+    margin-right:16px;
+
+    &:hover{
+      color:var( --ring-light);
+    }
+  }
+
 
   
   .movie_info{
-    max-height: 300px;
+    height: auto;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -72,44 +82,41 @@ padding:60px 0 0 ;
  
 }
 `;
-let Section2= styled.div`
-display: flex;
-flex-direction: column;
-margin:72px 10px;
-& h2{
-  letter-spacing: 6px;
-  font-size: 2rem;
-}
-`
+let Section2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 72px 10px;
+
+  & h2 {
+    letter-spacing: 6px;
+    font-size: 2rem;
+  }
+`;
 const Box = styled.div`
-height: 100%;
-display: flex;
-flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
 
-margin:10px 10px;
+  & :hover {
+    opacity: 0.8;
+  }
 
+  .name {
+    width: 110px;
+    height: 70px;
+    font-weight: 800;
+    font-size: small;
+    padding: 3px 10px;
+    box-shadow: 2px 7px 12px 7px rgb(0 0 0 / 15%);
+    overflow: hidden;
+  }
 
-& :hover{
-  opacity:.8;
-}
-
-.name{
-  width:110px;
-  height:70px;
-  font-weight:800;
-  font-size: small;
-  padding: 3px 10px;
-  box-shadow:2px 7px 12px 7px rgb(0 0 0 / 15%);
-  overflow: hidden;
-} 
-
-.image{
-  width: 110px;
-  height:140px;
-  box-shadow:2px 2px 20px 0px rgb(0 0 0 / 15%);
-}
-
+  .image {
+    width: 110px;
+    height: 140px;
+    box-shadow: 2px 2px 20px 0px rgb(0 0 0 / 15%);
+  }
 `;
 
-
-export {Container,Section2, Box};
+export { Container, Section2, Box };

@@ -5,7 +5,6 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
 
-
 `;
 const Box = styled.div`
 width:200px;
@@ -13,7 +12,7 @@ height: 100%;
 display: flex;
 flex-direction: column;
 margin:35px 20px ;
- 
+
 & :hover{
   opacity:.8;
 }
@@ -31,6 +30,8 @@ margin:35px 20px ;
   font-size: 1rem;
   padding: 8px 10px;
   box-shadow:2px 7px 12px 7px rgb(0 0 0 / 15%);
+  overflow: hidden;
+
 } 
 
 `;
