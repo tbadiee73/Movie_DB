@@ -1,29 +1,32 @@
-import { Movie_name, Pic_flex, Image } from "./styles";
+import {Frame, Image } from "./styles";
 import { Link } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Movie(props) {
   return (
-    <>
-      <div className="container flex scroll">
+
+   <div className="padding container ">
+    <div className="flex scroll ">
         {props.list.map((item) => {
           let img_url = "https:///www.themoviedb.org/t/p/w220_and_h330_face/";
           let img_popular_movie = `${img_url}${item.poster_path}`;
           return (
-            <Pic_flex key={item.id}>
+            <Frame key={item.id}>
               
-              <CircularProgressbar className="circle" value={item.vote_average * 10} text={item.vote_average * 10 + "%"}
+              <CircularProgressbar className="circle"  value={Math.round(item.vote_average * 10)}
+            text={`${Math.round(item.vote_average * 10)}%`}
               />
 
               <Link to={`/movie/${item.id}`}>
                 <Image src={img_popular_movie}></Image>
-                <Movie_name>{item.title || item.name}</Movie_name>
+                <div>{item.title || item.name}</div>
               </Link>
-            </Pic_flex>
+            </Frame>
           );
         })}
       </div>
-    </>
+      </div>
+
   );
 }

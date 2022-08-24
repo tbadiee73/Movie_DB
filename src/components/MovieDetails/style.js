@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 let Container = styled.div`
-padding:60px 0 0 ;
+padding:42px 0;
 
   .poster_ui {
     height: 380px;

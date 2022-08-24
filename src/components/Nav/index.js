@@ -1,9 +1,8 @@
 import { Nav, Navdetails, Navleft } from "./styles";
-import GroupWorkIcon from "@mui/icons-material/GroupWork";
-import { green } from "@mui/material/colors";
 import tv from "../assets/tv.svg";
 import film from "../assets/film.svg";
 import pepole from "../assets/theater-masks.svg";
+import mainlogo from "../assets/movie-logo.svg";
 import * as React from "react";
 
 import { Link } from "react-router-dom";
@@ -14,11 +13,8 @@ export default function Navbar() {
       <Nav>
         <Navdetails className="container">
           <Navleft>
-            <Link to="/">
-              <span>
-                <GroupWorkIcon fontSize="large" sx={{ color: green["A200"] }} />
-               mOvie_HOME
-              </span>
+            <Link to="/" className="logo">
+            <img src={mainlogo} alt="" style={{height: "70px"}} />
             </Link>
             <Link to={"/Movies"} className="nav_item">
               <img src={film} alt="" />

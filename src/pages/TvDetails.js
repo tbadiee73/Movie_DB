@@ -2,14 +2,14 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/Movie&TvDetails";
-import Cast from "../components/Movie&TvDetails/cast";
+import MovieDetail from "../components/MovieDetails";
+import MovieInfo from "../components/MovieDetails/movieinfo";
 import { get_tv_Details, get_tv_credits } from "../helpers/server";
 
 async function getDetails(id) {
   let tvDetails = get_tv_Details(id);
-  let tvDredit = get_tv_credits(id);
-  let output = await Promise.all([tvDetails, tvDredit]);
+  let tvCredit = get_tv_credits(id);
+  let output = await Promise.all([tvDetails, tvCredit]);
   return output;
 }
 export default function TvDetail() {
@@ -31,11 +31,12 @@ export default function TvDetail() {
     });
   }, [id]);
 
+
   return (
     <>
       <Navbar />
-      {!loading && <MovieDetail item={info} crew={crew} type="tv" />}
-      {!loading && <Cast cast={cast} type="tv" />}
+      {!loading && <MovieDetail item={info} type="tv" />}
+      <MovieInfo cast={cast} crew={crew} />
       <Footer />
     </>
   );

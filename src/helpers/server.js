@@ -49,9 +49,6 @@ export async function get_on_tv(page) {
   return FeachFromTMDB(top_rated_tv);
 }
 
-export async function get_Search(searchText) {
-  return FeachFromTMDB(Search + "&" + searchText);
-}
 
 export async function get_movie_Details(id,genre_ids){
   let movie_detail=`${base_url}/movie/${id}?api_key=${api_key}&language=en-US&with_genres=${genre_ids}`;
@@ -105,13 +102,6 @@ export async function get_person_credits(id) {
     let data = body;
     return data;
 }
-export async function get_movie_recommendations(id) {
-  let movie_recommendations=`${base_url}/movie/${id}/recommendations?api_key=${api_key}`;
-  let response = await fetch(movie_recommendations);
-  let body = await response.json();
-  let data = body;
-  return data;
-}
 
 export async function get_credits(id) {
   let response = await fetch(`${base_url}/person/${id}/combined_credits?api_key=${api_key}`)
@@ -141,6 +131,18 @@ export async function get_discover_movie(page,genres_id) {
 export async function get_discover_tv(page,genres_id) {
   let discover_tv=`${base_url}/discover/tv?api_key=${api_key}&page=${page}&with_genres=${genres_id}`;
   let response = await fetch(discover_tv);
+  let body = await response.json();
+  let data = body;
+  return data;
+}
+
+//export async function get_Search(searchText) {
+//return FeachFromTMDB(Search + "&" + searchText);
+//}
+
+export async function get_Search(query) {
+  let search =`${base_url}/search/multi?api_key=${api_key}&query=${query}`
+  let response = await fetch(search);
   let body = await response.json();
   let data = body;
   return data;

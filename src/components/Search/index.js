@@ -1,19 +1,62 @@
-import { SearchContainer } from "./styles";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {get_Search} from "../../helpers/server"
+import searchsvg from "../assets/search.svg";
 
-
-
-export default function header() {
-    return (
-      <>
-
-        <div className="container background">
-        <h2>wellcome!</h2>
-          <br/>
-          <h3> Get the shows and movies you love.</h3>
-        
-        </div>
-        
-      </>
-    );
-  }
+export default function Search() {
+  let [input, setinput] = useState("");
+  let [data, setdata] = useState([]);
   
+
+
+  let handelchange = (e) => {
+    setinput(e.target.value);
+  };
+
+ //
+
+//
+
+  return (
+    <>
+      <div className="background">
+       <div className="container">
+       <h2>wellcome.</h2>
+        <br />
+        <h5> Get the shows, movies and people you love.</h5>
+
+      
+          <input
+            className="searchinput"
+            type={"text"}
+            id="search"
+            placeholder="Search for..."
+            value={input}
+            onChange={handelchange}
+          />
+       
+        <Link to="#">
+          
+          <svg style={{position:" relative",top:" 14px", right:"60px" }} xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke= "var( --secondary-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </Link>
+
+       </div>
+      </div>
+    </>
+  );
+}
+
+
+
+
+
+
+{/** 
+ let navigate = useNavigate();
+
+let handelsubmit = (e) => {
+    e.preventDefault();
+    setinput(e.target.value);
+    navigate(`/search/${input}`);
+  };
+ */}

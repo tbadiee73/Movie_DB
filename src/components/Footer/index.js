@@ -1,24 +1,25 @@
 import { Footer_ui } from "./styles";
-import logo from "../assets/logo.svg";
 import twitt from "../assets/twitter.svg";
 import tel from "../assets/telegram.svg";
 import insta from "../assets/instagram.svg";
 import face from "../assets/facebook.svg";
 import { Link } from "react-router-dom";
+import fontlogo from "../assets/movie-logo-font.svg";
+
 
 export default function Footer() {
   return (
     <>
       <Footer_ui>
         <footer className="container">
-          <p>
+          <span>
             © 2022{" "}
             <Link to={"/"} className="link">
-              mOvie_HOME
+            <img src={fontlogo} alt="" style={{width:"100px"}}/>
             </Link>{" "}
             Foundation
-          </p>
-          <a href="https://developers.themoviedb.org/3"><img src={logo} alt="" width="140px" /></a>
+          </span>
+        
           <div className="logo">
             <img src={tel} alt="" />
             <img src={face} alt="" />

@@ -9,18 +9,28 @@ const Footer_ui = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0;
+    padding: 12px 0 20px ;
+  
 
-    & p {
+    & span {
       color: rgba(187, 199, 193, 0.75);
       font-size: large;
+      
+    
+      
 
       .link {
-        color: var(--ring-light);
+        padding: 0 10px;
+        position: relative;
+        top:10px;
+       
+        
       }
     }
 
    .logo {
+    position: relative;
+        top:10px;
     
       & img {
   

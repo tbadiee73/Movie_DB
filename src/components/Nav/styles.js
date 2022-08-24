@@ -13,11 +13,10 @@ let Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(  --primary-linear);
-  
+  background: var(--primary-dark);
   font-size: 1rem;
   font-weight: 600;
-  padding:20px 0;
+  padding:12px 0;
   
   
 `;
@@ -31,6 +30,10 @@ let Navdetails = styled.div`
 
 let Navleft = styled.div`
 
+.logo {
+  padding-right:10px;
+}
+
   & span{
     color:var(--ring-light);
     font-size: 1.30rem;
@@ -42,7 +45,10 @@ let Navleft = styled.div`
     cursor: pointer;
     color: var(--primary-text);
     text-transform: uppercase;
-    text-indent: 10px;
+    position: relative;
+        bottom:20px;
+
+    
  
 
     & img{

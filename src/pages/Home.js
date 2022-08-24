@@ -1,5 +1,5 @@
 import Navbar from "../components/Nav";
-import Header from "../components/Search";
+import Search from "../components/Search";
 import Footer from "../components/Footer";
 import {HomePageSwichButton} from "../components/Movielist";
 
@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
     <Navbar />
-    <Header/>
+    <Search/>
       
     <HomePageSwichButton  tabs={tabs}  /> 
   

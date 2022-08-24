@@ -3,7 +3,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { Link } from "react-router-dom";
 import noimage from "../assets/noimage.svg";
-
 export default function MovieDetail(props) {
   let img_poster = `http://image.tmdb.org/t/p/w342${props.item.poster_path}`;
 
@@ -31,11 +30,9 @@ export default function MovieDetail(props) {
           
 
           <span className="user_score">
-            <CircularProgressbar
-              className="circle"
-              value={props.item.vote_average * 10}
-              text={props.item.vote_average * 10 + "%"}
-            />{" "}
+          <CircularProgressbar className="circle"   value={Math.round(props.item.vote_average * 10)}
+            text={`${Math.round(props.item.vote_average * 10)}%`}
+              />{" "}
             <h4>
               User <br /> Score
             </h4>
@@ -48,6 +45,7 @@ export default function MovieDetail(props) {
             </h2>
             <i>{props.item.overview}</i>
           </div>
+        
         </div>
       </Container>
     </div>

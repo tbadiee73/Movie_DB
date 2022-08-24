@@ -2,9 +2,9 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/Movie&TvDetails";
-import Cast from "../components/Movie&TvDetails/cast";
-import { get_movie_Details, get_movie_credits } from "../helpers/server";
+import MovieDetail from "../components/MovieDetails";
+import MovieInfo from "../components/MovieDetails/movieinfo";
+import { get_movie_Details,get_movie_credits} from "../helpers/server";
 
 async function getDetails(id) {
   let moviedetails = get_movie_Details(id);
@@ -30,12 +30,14 @@ export default function Movie_Detail() {
       setLoading(false);
     });
   }, [id]);
-
+  
   return (
     <>
       <Navbar />
       {!loading && <MovieDetail item={info} type="movie" />}
-      {!loading && <Cast cast={cast} type="movie" />}
+      {!loading && <MovieInfo cast={cast} crew={crew} />}
+   
+    
       <Footer />
     </>
   );

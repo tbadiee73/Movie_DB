@@ -3,7 +3,7 @@ import { Container, Box } from "../MoviePage/style";
 import woman from "../assets/woman.svg"
 import man from "../assets/man.svg"
 
-export default function People_Box(props) {
+export default function PeopleBox(props) {
   return (
     <div className="container">
        <h1>Popular People</h1>

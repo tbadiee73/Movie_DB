@@ -3,7 +3,7 @@ import styled from "styled-components";
 let Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 64px 0px 24px 0px;
+  padding-top:32px;
 
   & h2 {
     margin-right: 16px;
@@ -15,7 +15,7 @@ let Title = styled.div`
 font-weight: 600;
   border-radius:20px;
   text-align: center;
-  padding:6px 12PX;
+  padding:6px 12px;
   background:var(--secondary-linear) ;
 }
 
@@ -33,17 +33,12 @@ font-weight: 600;
 }
 `;
 
-let Movie_name = styled.a`
-  
-  &:hover {
-    color: var(--secondary-light);
-  }
-`;
 
-let Pic_flex = styled.div`
+let Frame = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 22px 12px 22px;
+
 
 
   .circle{
@@ -76,7 +71,9 @@ let Image = styled.img`
 box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 12px 2px;
 
 
+
+
 `;
 
 
-export { Container, Title, Movie_name, Pic_flex, Image };
+export { Container, Title, Frame, Image };
