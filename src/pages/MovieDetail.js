@@ -2,8 +2,8 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/MovieDetails";
-import MovieInfo from "../components/MovieDetails/movieinfo";
+import MovieDetail from "../components/Movie&TvDetails";
+import MovieInfo from "../components/Movie&TvDetails/movieActor";
 import { get_movie_Details,get_movie_credits} from "../helpers/server";
 
 async function getDetails(id) {

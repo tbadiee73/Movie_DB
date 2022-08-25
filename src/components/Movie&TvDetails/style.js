@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-
 let Container = styled.div`
-padding:42px 0;
+
+padding:40px 0;
 
   .poster_ui {
     height: 380px;
@@ -32,10 +32,9 @@ padding:42px 0;
     width: 70%;
     display: flex;
     flex-direction: column;
-   align-content: center;
-   color: black;
-
-   justify-content:center;
+    align-content: center;
+    color: black;
+    justify-content:center;
   
  }
  & i{
@@ -110,6 +109,11 @@ const Box = styled.div`
     padding: 3px 10px;
     box-shadow: 2px 7px 12px 7px rgb(0 0 0 / 15%);
     overflow: hidden;
+  }
+
+  .character{
+    font-size: 0.65rem;
+    color:#9ba0a0;
   }
 
   .image {

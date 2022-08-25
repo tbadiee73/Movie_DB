@@ -19,7 +19,7 @@ body {
   box-sizing: border-box;
 }
 body::-webkit-scrollbar {
-  width: 0em;
+  width: .45em;
   text-align: end;
 
 }
@@ -106,7 +106,7 @@ h5 {
 }
 
 /* Search baner*/
-
+/*background-image: linear-gradient(to left, #1A1A1A , rgba(26,26,26,0));*/
 .background {
   background: linear-gradient(rgba(104, 102, 102, 0), rgb(255, 255, 255, 1)),
     url("../src/components/assets/backimg.jpg") center;
@@ -125,7 +125,7 @@ h5 {
 }
 .padding{
   padding-bottom: 50px;
-  background: url("../src/components/assets/music.svg") center;
+  background: url("./components/assets/music.svg") center;
 background-size: cover;
 }
 
@@ -151,4 +151,4 @@ background-size: cover;
   outline: none;
 }
 
-/*bacground path*/
+

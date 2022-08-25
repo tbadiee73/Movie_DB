@@ -31,5 +31,4 @@ export default App;
 
 
 
-//https://developers.themoviedb.org/3/movies/get-latest-movie  API
 

@@ -30,7 +30,7 @@ return (
               <div className="name">
                 {item.name}
                 <br />
-                <i>{item.job}</i>
+                <i className="character">{item.job}</i>
               </div>
             </Link>
           </Box>

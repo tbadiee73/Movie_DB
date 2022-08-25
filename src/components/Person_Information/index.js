@@ -1,4 +1,4 @@
-import { Container, Section2, Box } from "../MovieDetails/style";
+import { Container, Section2, Box } from "../Movie&TvDetails/style";
 import { Link } from "react-router-dom";
 import noimage from "../assets/noimage.svg"
 import woman from "../assets/woman.svg"

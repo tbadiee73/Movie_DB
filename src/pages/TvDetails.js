@@ -1,9 +1,10 @@
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
+import MovieDetail from "../components/Movie&TvDetails";
+import MovieInfo from "../components/Movie&TvDetails/movieActor";
+import Season from "../components/Season";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/MovieDetails";
-import MovieInfo from "../components/MovieDetails/movieinfo";
 import { get_tv_Details, get_tv_credits } from "../helpers/server";
 
 async function getDetails(id) {
@@ -36,7 +37,8 @@ export default function TvDetail() {
     <>
       <Navbar />
       {!loading && <MovieDetail item={info} type="tv" />}
-      <MovieInfo cast={cast} crew={crew} />
+      
+      {!loading && <MovieInfo cast={cast} crew={crew} />}
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 let api_key = "89b7aec3483c3e4b2c9b62cf7eb1f31f";
 let base_url = "https://api.themoviedb.org/3";
-let Search = `${base_url}/search/multi?api_key=${api_key}`;
+
 
 
 
@@ -136,12 +136,9 @@ export async function get_discover_tv(page,genres_id) {
   return data;
 }
 
-//export async function get_Search(searchText) {
-//return FeachFromTMDB(Search + "&" + searchText);
-//}
 
-export async function get_Search(query) {
-  let search =`${base_url}/search/multi?api_key=${api_key}&query=${query}`
+export async function get_Search(input) {
+  let search =`${base_url}/search/multi?api_key=${api_key}&query=${input}`
   let response = await fetch(search);
   let body = await response.json();
   let data = body;
