@@ -9,13 +9,13 @@ import man from "../components/assets/man.svg";
 import woman from "../components/assets/woman.svg";
 import noimage from "../components/assets/noimage.svg";
 
+
 export default function Search() {
   let [data, setdata] = useState([]);
   let [loading, setLoading] = useState(true);
   let [error, setError] = useState(false);
   let { searchtext } = useParams();
 
-  let navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -38,18 +38,13 @@ export default function Search() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container"  style={{ height: "1550px" }}>
         <Container>
           {data.map((item) => {
-             let img_people = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path || item.poster_path}`;
-             let woman_img = `${woman}`;
-             let man_img = `${man}`;
-             let gender_img =
-               `${item.gender}` == 1 ? `${woman_img}` : `${man_img}`;
-             let poster =
-               `${item.profile_path || item.poster_path}` !== "null"
-               ? `${img_people}`
-               : `${gender_img}`;
+            let img_people = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path||item.poster_path}`;
+    
+            let noimages =`${noimage}`;
+            let poster =`${item.profile_path||item.poster_path}` !== "null"? `${img_people}`: `${noimages}`; 
             if (item.media_type === "person") {
              
               return (
@@ -82,6 +77,7 @@ export default function Search() {
           })}
         </Container>
       </div>
+    
       <Footer />
     </>
   );
