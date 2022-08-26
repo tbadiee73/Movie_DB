@@ -127,6 +127,7 @@ h5 {
   padding-bottom: 50px;
   background: url("./components/assets/music.svg") center;
 background-size: cover;
+
 }
 
 
@@ -149,6 +150,11 @@ background-size: cover;
 
 .searchinput:focus {
   outline: none;
+  
 }
+
+
+
+
 
 

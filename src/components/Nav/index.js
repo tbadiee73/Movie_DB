@@ -4,9 +4,8 @@ import film from "../assets/film.svg";
 import pepole from "../assets/theater-masks.svg";
 import mainlogo from "../assets/movie-logo.svg";
 import * as React from "react";
-import SearchAppBar from "./searchbar";
 import { Link } from "react-router-dom";
-
+import MultiSearch from "./search";
 
 export default function Navbar() {
   return (
@@ -15,7 +14,7 @@ export default function Navbar() {
         <Navdetails className="container">
           <Navleft>
             <Link to="/" className="logo">
-            <img src={mainlogo} alt="" style={{height: "70px"}} />
+              <img src={mainlogo} alt="" style={{ height: "70px" }} />
             </Link>
             <Link to={"/Movies"} className="nav_item">
               <img src={film} alt="" />
@@ -30,12 +29,9 @@ export default function Navbar() {
               Pepole{" "}
             </Link>
           </Navleft>
-          
-          
-           <Link to="#" style={{position:"relative", top:"10px"}}><SearchAppBar /></Link>
-         
+          <MultiSearch />
         </Navdetails>
-        
+       
       </Nav>
     </>
   );

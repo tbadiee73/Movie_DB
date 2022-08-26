@@ -44,6 +44,7 @@ function HomePageSwichButton(props) {
           {props.tabs.map((tab) => {
             return (
               <a
+              className="select"
                 href="#mh"
                 autoFocus
                 onClick={() => {

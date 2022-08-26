@@ -2,7 +2,6 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import MovieDetail from "../components/Movie&TvDetails";
 import MovieInfo from "../components/Movie&TvDetails/movieActor";
-import Season from "../components/Season";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { get_tv_Details, get_tv_credits } from "../helpers/server";

@@ -3,7 +3,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { Link } from "react-router-dom";
 import noimage from "../assets/noimage.svg";
-import Season from "../Season";
 export default function MovieDetail(props) {
   let img_poster = `http://image.tmdb.org/t/p/w342${props.item.poster_path}`;
 
@@ -46,7 +45,7 @@ export default function MovieDetail(props) {
             </h2>
             <i>{props.item.overview}</i>
           </div>
-          <Box ><Season number={props.item.number_of_seasons}/></Box>
+      
         </div>
       </Container>
     </div>

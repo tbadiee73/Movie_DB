@@ -8,6 +8,7 @@ import TvDetail from "./pages/TvDetails";
 import People from "./pages/People"
 import PersonInformation from "./pages/Persone_Information"
 import GenresPage from "./pages/GenreCollection";
+import SearchResults from "./pages/SearchResults"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/People" element={<People/>} />
         <Route path="/person/:id" element={<PersonInformation/>} />
         <Route path="/genres/:genre/:genre_name/:genre_id" element={<GenresPage />}/>
+        <Route path="/search/:searchtext" element={<SearchResults/>} />
        
       </Routes>
     </BrowserRouter>

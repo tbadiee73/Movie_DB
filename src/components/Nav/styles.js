@@ -15,6 +15,7 @@ let Nav = styled.div`
   font-size: 1rem;
   font-weight: 600;
   padding: 12px 0;
+  height:95px;
 `;
 
 let Navdetails = styled.div`
@@ -48,4 +49,42 @@ let Navleft = styled.div`
   }
 `;
 
-export { Cardcontainer, Nav, Navdetails, Navleft };
+let SearchInput=styled.div`
+.navinput{
+  width:120px;
+  padding:8px;
+  border: none;
+  font-size: medium;
+  background-color:rgba(123, 148, 160, 0.7);
+  border-radius: 4px;
+  
+ &::placeholder{
+    color:#fff;
+    padding-left: 10px;
+  }
+
+}
+
+
+.navinput:hover{
+  background-color:rgba(173, 177, 179, 0.9);
+}
+
+.navinput:focus{
+  width: 240px;
+transition:  all 0.5s ease-in-out;
+outline: none;
+}
+
+.menuOption{
+color:#fff;
+display:block;
+border-bottom: 1px solid #fff;
+padding: 10px 0;
+
+}
+
+
+`
+
+export { Cardcontainer, Nav, Navdetails, Navleft,SearchInput };

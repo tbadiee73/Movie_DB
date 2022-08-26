@@ -22,8 +22,9 @@ font-weight: 600;
 & a {
   padding:6px 12px;
   color:var(--primary-dark);
-  
 
+  
+ 
   &:focus{
     color:var(--primary-light);
     background-color:var(--primary-dark) ;
