@@ -50,6 +50,14 @@ let Navleft = styled.div`
 `;
 
 let SearchInput=styled.div`
+position: relative;
+.searchMenu{
+  background: rgba(103, 115, 128, .9);
+  padding: 0 7px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
 .navinput{
   width:120px;
   padding:8px;
@@ -57,6 +65,7 @@ let SearchInput=styled.div`
   font-size: medium;
   background-color:rgba(123, 148, 160, 0.7);
   border-radius: 4px;
+  
   
  &::placeholder{
     color:#fff;

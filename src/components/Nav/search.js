@@ -49,7 +49,7 @@ export default function MultiSearch() {
           onChange={handelchange}
         />
       </Link>
-      <div style={{background:"rgba(103, 115, 128, .9)",padding:"0px 7px" }} >
+      <div  className="searchMenu" >
         {data.slice(0, 6).map((item) => {
           if (item.media_type === "person") {
             return (
