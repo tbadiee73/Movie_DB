@@ -9,40 +9,36 @@ import {
 } from "../../helpers/server";
 import PaginationOutlined from "../Pagination";
 
-
-function getdata_by_tab(id,page) {
-    if (id === "tv") {
-      return get_popular_tv(page);
-    } else if (id === "now Playing") {
-      return get_airing_tv(page);
-    } else if (id === "upcoming") {
-      return get_on_tv(page);
-    } else if (id === "top Rated") {
-      return get_topRated_tv(page);
-    }
+function getdata_by_tab(id, page) {
+  if (id === "tv") {
+    return get_popular_tv(page);
+  } else if (id === "now Playing") {
+    return get_airing_tv(page);
+  } else if (id === "upcoming") {
+    return get_on_tv(page);
+  } else if (id === "top Rated") {
+    return get_topRated_tv(page);
   }
-  
-export default function TV_swich_button(props) {
+}
 
-  let [page, setpage]=useState(1);
-
+export default function TvSwichButton(props) {
+  let [page, setpage] = useState(1);
   let [swich, setswich] = useState("tv");
-
   let [data, setdata] = useState([]);
-
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
-    getdata_by_tab(swich,page).then((response) => {
+    setLoading(true);
+    getdata_by_tab(swich, page).then((response) => {
       setdata(response);
-     
+      setLoading(false);
     });
-  }, [swich,page]);
+  }, [swich, page]);
 
   return (
     <>
       <Container className="container">
-        <h2 style={{letterSpacing:"4px" }}>TV SHOWS</h2>
+        <h2 style={{ letterSpacing: "4px" }}>TV SHOWS</h2>
         <Title>
           {props.tabs.map((tab) => {
             return (
@@ -52,7 +48,6 @@ export default function TV_swich_button(props) {
                 onClick={() => {
                   setswich(tab.id);
                   setpage(1);
-
                 }}
               >
                 {tab.name}
@@ -61,13 +56,15 @@ export default function TV_swich_button(props) {
           })}
         </Title>
       </Container>
-      <MoviesBox list={data} type={"tv"}/>
-      
-      <PaginationOutlined setPage={(number) =>{
 
-       setpage(number)
-      }}  currentpage={page} />
+      {!loading && <MoviesBox list={data} type={"tv"} />}
+
+      <PaginationOutlined
+        setPage={(number) => {
+          setpage(number);
+        }}
+        currentpage={page}
+      />
     </>
   );
 }
-

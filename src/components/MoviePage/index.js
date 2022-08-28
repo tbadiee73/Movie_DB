@@ -6,8 +6,8 @@ function MoviesBox(props) {
     <div className="container">
       <Container>
         {props.list.map((item) => {
-          let img_url ="https://www.themoviedb.org/t/p/w220_and_h330_face/";
-          let img_popular_movie = `${img_url}${item.poster_path}`;
+
+          let img_popular_movie = `https://www.themoviedb.org/t/p/w220_and_h330_face/${item.poster_path}`;
           
           return (
             <Box  key={item.id}>

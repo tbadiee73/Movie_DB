@@ -27,12 +27,14 @@ function getdata_by_tab(id, page) {
 
 function HomePageSwichButton(props) {
   let [swich, setswich] = useState("movie");
-
   let [data, setdata] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     getdata_by_tab(swich).then((response) => {
       setdata(response);
+      setLoading(false);
     });
   }, [swich]);
 
@@ -44,7 +46,7 @@ function HomePageSwichButton(props) {
           {props.tabs.map((tab) => {
             return (
               <a
-              className="select"
+                className="select"
                 href="#mh"
                 autoFocus
                 onClick={() => {
@@ -57,19 +59,22 @@ function HomePageSwichButton(props) {
           })}
         </Title>
       </Container>
-      <Movie list={data} />
+      {!loading && <Movie list={data} />}
     </>
   );
 }
 
-function Movie_swich_button(props) {
+function MovieSwichButton(props) {
   let [page, setpage] = useState(1);
   let [swich, setswich] = useState("movie");
   let [data, setdata] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     getdata_by_tab(swich, page).then((response) => {
       setdata(response);
+      setLoading(false);
     });
   }, [swich, page]);
 
@@ -94,7 +99,7 @@ function Movie_swich_button(props) {
           })}
         </Title>
       </Container>
-      <MoviesBox list={data} type={"movie"} />
+      {!loading && <MoviesBox list={data} type={"movie"} />}
 
       <PaginationOutlined
         setPage={(number) => {
@@ -106,4 +111,4 @@ function Movie_swich_button(props) {
   );
 }
 
-export { HomePageSwichButton, Movie_swich_button };
+export { HomePageSwichButton, MovieSwichButton};

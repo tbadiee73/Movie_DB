@@ -31,12 +31,11 @@ export default function TvDetail() {
     });
   }, [id]);
 
-
   return (
     <>
       <Navbar />
       {!loading && <MovieDetail item={info} type="tv" />}
-      
+
       {!loading && <MovieInfo cast={cast} crew={crew} />}
       <Footer />
     </>

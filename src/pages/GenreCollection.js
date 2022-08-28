@@ -38,7 +38,7 @@ export default function Genre() {
     <>
       <Navbar />
 
-       <Genres list={data} />
+      {!loading && <Genres list={data} />}
       <PaginationOutlined setPage={setPage} />
 
       <Footer />

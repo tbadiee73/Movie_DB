@@ -10,11 +10,11 @@ export default function PeopleBox(props) {
       <Container>
         {props.list.map((item) => {
           
-          let img_people = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path}`;
-          let woman_img =`${woman}`;
-          let man_img =`${man}`;
-          let gender_img =`${item.gender}` == 1 ? `${woman_img}`: `${man_img}`;
-          let poster =`${item.profile_path}` !== "null"? `${img_people}`: `${gender_img}`; 
+          let image = `https://image.tmdb.org/t/p/w220_and_h330_face/${item.profile_path}`;
+          let womanImage =`${woman}`;
+          let manImage =`${man}`;
+          let gender =`${item.gender}` == 1 ? `${womanImage}`: `${manImage}`;
+          let poster =`${item.profile_path}` !== "null"? `${image}`: `${gender}`; 
           return (
           
             <Box key={item.id}>

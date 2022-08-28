@@ -1,10 +1,8 @@
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
-import TV_swich_button from "../components/TvList";
+import TvSwichButton from "../components/TvList";
 
 export default function TvSHOW() {
-
-
   let tabs = [
     { id: "tv", name: "Popular" },
     { id: "now Playing", name: "Airing Today" },
@@ -16,8 +14,8 @@ export default function TvSHOW() {
     <>
       <Navbar />
 
-      <TV_swich_button tabs={tabs} />
-      
+      <TvSwichButton tabs={tabs} />
+
       <Footer />
     </>
   );
