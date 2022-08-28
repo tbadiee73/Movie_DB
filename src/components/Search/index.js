@@ -52,9 +52,9 @@ export default function Search() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="var( --secondary-light)"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               class="feather feather-search"
             >
               <circle cx="11" cy="11" r="8"></circle>

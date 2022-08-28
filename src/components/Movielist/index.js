@@ -82,10 +82,10 @@ function MovieSwichButton(props) {
     <>
       <Container className="container">
         <h2 style={{ letterSpacing: "4px" }}>MOVIES</h2>
-        <Title>
+        <Title key={props.id}>
           {props.tabs.map((tab) => {
             return (
-              <a
+              <a 
                 href="#"
                 autoFocus
                 onClick={() => {

@@ -7,7 +7,7 @@ import { get_discover_movie, get_discover_tv } from "../helpers/server";
 import Genres from "../components/Genre";
 
 export default function Genre() {
-  let { genre_id, genre, genre_name } = useParams();
+  let { genre_id, genre} = useParams();
   let [data, setData] = useState([]);
   let [page, setPage] = useState();
   let [loading, setLoading] = useState(false);
