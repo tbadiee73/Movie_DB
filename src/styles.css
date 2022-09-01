@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
 
 ::-webkit-scrollbar {
   height: 0.45em;
+
 }
 
 ::-webkit-scrollbar-track {
@@ -60,6 +61,7 @@ body {
   align-items: center;
   margin: auto;
   padding: 30px;
+ 
 
 }
 

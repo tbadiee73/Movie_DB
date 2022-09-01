@@ -41,7 +41,7 @@ export default function MovieDetail(props) {
           <i className="tagline">"{props.item.tagline}"</i>
           <div>
             <h2>
-              <i>overview</i>
+              <i>Overview</i>
             </h2>
             <i>{props.item.overview}</i>
           </div>

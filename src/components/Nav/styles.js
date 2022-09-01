@@ -59,7 +59,7 @@ position: relative;
   width: 100%;
 }
 .navinput{
-  width:240px;
+  width:120px;
   padding:8px;
   border: none;
   font-size: medium;
@@ -80,6 +80,8 @@ position: relative;
 }
 
 .navinput:focus{
+  width:240px;
+  transition: all 0.5s ease-in-out;
 outline: none;
 }
 

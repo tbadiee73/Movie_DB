@@ -31,7 +31,7 @@ export default function Search() {
           <br />
           <h5> Get the shows, movies and people you love.</h5>
 
-          <form onSubmit={handlesubmit}>
+          <form >
           <input
             className="searchinput"
             type={"text"}
