@@ -24,8 +24,7 @@ export default function Movie_Detail() {
       let details = results[0];
       let credits = results[1];
       setinfo(details);
-      setCredit(credits.cast);
-      setCredit(credits.crew);
+      setCredit(credits);
       setLoading(false);
     });
   }, [id]);

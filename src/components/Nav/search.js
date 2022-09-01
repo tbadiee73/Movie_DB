@@ -49,7 +49,7 @@ export default function MultiSearch() {
           onChange={handelchange}
         />
       </Link>
-      <div  className="searchMenu" >
+      <div className="searchMenu">
         {data.slice(0, 6).map((item) => {
           if (item.media_type === "person") {
             return (
@@ -58,7 +58,7 @@ export default function MultiSearch() {
                 key={item.id}
                 className="menuOption"
               >
-                <img src={person} alt="" style={{ width: "20px"}} />
+                <img src={person} alt="" style={{ width: "20px" }} />
                 {item.name}
               </Link>
             );

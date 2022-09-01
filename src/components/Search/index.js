@@ -13,9 +13,7 @@ export default function Search() {
   let navigate = useNavigate();
 
   let handlesubmit = (e) => {
-    console.log(input);
-    
-    e.preventDefault();
+     e.preventDefault();
     if (input){
       navigate(`/search/${input}`);
     }

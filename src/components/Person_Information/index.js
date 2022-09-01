@@ -36,7 +36,7 @@ export default function PersonInformation(props) {
       <Section2 className="column ">
         <h2>Known For:</h2>
         <div className="flex_start scroll">
-          {props.credit.slice(0, 8).map((item) => {
+          {props.credit?.slice(0, 8).map((item) => {
             let image =`https://www.themoviedb.org/t/p/w220_and_h330_face/${item.poster_path}`
             let no_image = `${noimage}`
             let poster =`${item.poster_path}` !== "null"? `${image}`: `${no_image}`;
